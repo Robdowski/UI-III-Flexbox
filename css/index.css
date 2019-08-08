@@ -75,20 +75,25 @@ h1, h2, h3, h4, h5 {
 
 nav{
 	display:flex;
-	justify-content: space-between
+	justify-content: space-between;
+	align-items:center;
+}
+
+nav .bar{
+	text-decoration: none;
+	color:gray;
 }
 
 nav a{
-	text-decoration: none;
-	color:gray;
 	padding:1vh 2.5vh;
 }
 
-nav a:hover{
+nav .bar:hover{
 	background-color:gray;
 	color:white;
 	border-right: 2px solid black;
 	border-left: 2px solid black;
+	transition: 0.2s;
 }
 
 /* Styling the Header */
@@ -110,9 +115,10 @@ header .leftHead{
 	justify-content: center;
 	flex-direction:column;
 	text-align:center;
+	align-items: center;
 }
 
-header .leftHead button{
+header .leftHead span{
 	text-decoration:none;
 	background: white;
 	color:black;
@@ -120,6 +126,32 @@ header .leftHead button{
 	border-left: 1px solid black;
 	border-top: 1px solid lightgray;
 	border-right: 1px solid lightgray;
+	width: 100px;
+	height: 30px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header .leftHead span:hover{
+	background-color:gray;
+	color:white;
+	cursor:pointer;
+	transition: 0.2s;
+}
+
+header .leftHead span:active{
+	background-color:white;
+	color: black;
+	transform: translateY(4px);
+	transition: 0.1s;
+}
+
+header .leftHead span:after{
+	background-color:white;
+	
+	transform: translateY(4px);
+	color:black;
 }
 
 /* Styling the Content */
